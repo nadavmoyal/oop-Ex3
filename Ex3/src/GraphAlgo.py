@@ -99,7 +99,6 @@ class GraphAlgo(GraphAlgoInterface):
             max = -1
             for n1 in nodes:
                 if(n!=n1):
-                    print(n)
                     dist = self.shortest_path_dist(n,n1)
                     if(dist!=float('inf')):
                         if(max<dist):
@@ -148,7 +147,6 @@ class GraphAlgo(GraphAlgoInterface):
                     if neighbor.get_dist() == -1 or dist < neighbor.get_dist():
                         # updating the distance, adding the node to the heap and updating the parent of the node
                         neighbor.set_dist(dist)
-                        print(f"{heap} or {(dist, neighbor)}")
                         hq.heappush(heap, (dist, neighbor))
                         di_path[neighbor.get_key()] = node.get_key()
         return di_path
