@@ -41,6 +41,7 @@ class TestGraphAlgo(TestCase):
 
 
     def test_get_graph(self):
+        self.temp=self.ga0.get_graph()
 
         self.fail()
 
@@ -77,7 +78,23 @@ class TestGraphAlgo(TestCase):
 
 
     def test_tsp(self):
-        self.fail()
+        _graphAlgo = GraphAlgo()
+        _graph = DiGraph()
+        _graph.add_node(0, (2, 3))
+        _graph.add_node(1, (3, 3))
+        _graph.add_node(2, (5, 3))
+        _graph.add_node(3, (5, 2))
+        _graph.add_node(4, (2, 9))
+        _graph.add_edge(0, 1, 10)
+        _graph.add_edge(1, 2, 10)
+        _graph.add_edge(2, 0, 1)
+        _graph.add_edge(2, 1, 1)
+        _graph.add_edge(1, 3, 2)
+        _graph.add_edge(3, 2, 7)
+        _graph.add_edge(3, 0, 4)
+        _graph.add_edge(4, 0, 3)
+        _graphAlgo.__init__(_graph)
+        self.assertEqual((2, 8), (_graphAlgo.TSP(list[0,1])))
 
     def test_center_point(self):
         _graphAlgo = GraphAlgo()

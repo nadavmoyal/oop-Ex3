@@ -66,7 +66,7 @@ class GraphAlgo(GraphAlgoInterface):
             return float('inf'), []
         self._reset_values()
         # calculate the shortest path from id1 to id2
-        shortest_path = self._reconstruct_path(id1, id2, self._dijkstra(n1, n2))
+        shortest_path = self._reconstruct_path(id1, id2, self.dijkstra(n1, n2))
         # print(self.get_graph().get_all_v().get(id2).get_dist())
         return n2.get_dist(), shortest_path
 
@@ -85,7 +85,26 @@ class GraphAlgo(GraphAlgoInterface):
         pass
 
     def TSP(self, node_lst: List[int]) -> (List[int], float):
-        pass
+        # run all of our nodes and check short path from every one to each other with shortPath
+        # and the result append to our min_tsp list
+        min_tsp = []
+        nodes = self._graph.get_all_v()
+        for nodeStart in nodes:
+            for nodeForward in nodes:
+                if (nodeStart != nodeForward):
+                    min_tsp.append(self.shortest_path(nodeStart, nodeForward))
+        # this will convert are list of tuple to list of list
+        lstOfLst = [list(ele) for ele in min_tsp]
+
+        # for i in range(len(lstOfLst)):
+        #     lstOfLst[i][1] = list(dict.fromkeys(lstOfLst[i][1])) # this will remove dup from our path list
+        # in here we sort our list by its min weight of its path
+        sortList = sorted(lstOfLst)
+        for i in range(len(sortList)):
+            if set(sorted(node_lst)).issubset(set(sorted(sortList[i][1]))):  # sortList[i][1].sort == node_lst.sort:
+                return sortList[i][1], sortList[i][0]
+
+        return [], -1
 
     def centerPoint(self) -> (int, float):
         #if the graph isn't connected return null
