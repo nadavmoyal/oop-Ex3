@@ -55,3 +55,21 @@ class Node(object):
         if type(self) != type(other):
             return False
         return self.get_key() == other.get_key() and self.get_pos() == other.get_pos()
+
+    def __eq__(self, other):
+        return (self._key == other._key) and (self.g == other.g)
+
+    def __ne__(self, other):
+        return not (self == other)
+
+    def __lt__(self, other):
+        return (self._key < other._key) and (self.g < other.g)
+
+    def __gt__(self, other):
+        return (self._key > other._key) and (self.g > other.g)
+
+    def __le__(self, other):
+        return (self < other) or (self == other)
+
+    def __ge__(self, other):
+        return (self > other) or (self == other)
