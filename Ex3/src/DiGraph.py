@@ -1,4 +1,5 @@
-from Ex3.src.GraphInterface import GraphInterface
+from GraphInterface import GraphInterface
+from Node import Node
 """
 # ======= contructor from Ex2 that we did for reminder =====
 # public class DW_Graph implements DirectedWeightedGraph {
@@ -9,31 +10,18 @@ from Ex3.src.GraphInterface import GraphInterface
 #     private int NumberOfEdges;
 # ======= contructor from Ex2 that we did for reminder =====
 """
-# this is the constructor that will have every thing that a graph will hold in it
-from Ex3.src.Node import Node
+
 
 
 class DiGraph(GraphInterface):
-    # from the json file we can see that the nodes is a dict with 2 KEY - pos,id
-    # "Nodes": [
-    #     {
-    #         "pos": "35.18753053591606,32.10378225882353,0.0",
-    #         "id": 0
-    #     },
-    # and in here we will hold it like we did in Ex2 in java.
-    # it will be a dict that the key is the node id and the value is another dict (nested dict) that will hold all
-    # of his neighbors like this, KEY: 'other_nodes_id', VALUE: 'weight'
-    # (this is according to the GraphInterface). that will make easy on us when we want in func
+
     _nodes: dict
-    _edgesOut: dict # in Ex2 in java we had hashmap of edge theat hold KEY: node_id , VALUE: nested hashmap with all of his neighbor. so now in here we will have 2 dict (hashMap) for it, for in\out neighbors
-    _edgesInside: dict  # this also will be dict of dict like '_edgeOut' but this time it will be holding all the edges that comes *IN* from key node. this is for the use of the func 'all_in_edges_of_node'
-    _mc: int  # this will be the mode count that check the the number of changes in the graph
+    _edgesOut: dict
+    _edgesInside: dict
+    _mc: int
     _numOfEdges: int
-    _numOfNodes: int  # i added it
+    _numOfNodes: int
 
-    # _edges: dict # the edges in the json file is a dict that look like that "Edges": [{"src": 0,"w": 1.4004465106761335,"dest": 1},,.....
-
-    # i didnt add '_inEdge' didnt understand what it is
 
     def __init__(self):
         self._nodes: dict = {}
@@ -42,7 +30,6 @@ class DiGraph(GraphInterface):
         self._numOfEdges: int = 0
         self._numOfNodes: int = 0
         self._mc: int = 0
-        # self._inEdge: dict = {}
 
     def v_size(self) -> int:  # 'v' is for vertex - node
         return self._numOfNodes
@@ -80,8 +67,8 @@ class DiGraph(GraphInterface):
         if node_id in self._nodes:  # if the node already exist
             return False
         # **** need double check ****
-        self._nodes[node_id] = pos
-        # self._nodes[node_id] = Node(node_id, pos)
+        # self._nodes[node_id] = pos
+        self._nodes[node_id] = Node(node_id, pos)
         # **** need double check ****
 
         self._edgesOut[node_id] = {}  # because he doesnt have a neighbor yet
@@ -89,18 +76,21 @@ class DiGraph(GraphInterface):
         self._numOfNodes+=1
         self._mc += 1
 
-        # i didnt add '_inEdge'
         return True
 
     # ****** DID SOME CHANGE ****** WHY THE FOR LOOP ****
     def remove_node(self, node_id: int) -> bool:
         if node_id not in self._nodes:  # if the node that want to be remove doesn't exist
             return False
+        # from numOfEdge we need to del all of the edge we del when we del node id1
+        numOfEdgeOutFromNode_id = len(self.all_out_edges_of_node(node_id))
+        numOfEdgeInsideFromNode_id = len(self.all_in_edges_of_node(node_id))
         del self._nodes[node_id]
         del self._edgesOut[node_id]  # this will delete all of the edges that comes out from the deleted node
         del self._edgesInside[node_id]  # this will delete all of the edges that comes out from the deleted node
         self._mc += 1
         self._numOfNodes -= 1
+        self._numOfEdges -= (numOfEdgeOutFromNode_id + numOfEdgeInsideFromNode_id)
         return True
         # ******** he add 2 for loop that i didnt understand why???
 
@@ -115,6 +105,7 @@ class DiGraph(GraphInterface):
         self._numOfEdges -= 1
         self._mc += 1
         return True
+
 
     # ========== THIS FUNC WASNT AT START ======
     def get_all_v(self) -> dict:
