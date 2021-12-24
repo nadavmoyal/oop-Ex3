@@ -12,9 +12,9 @@
 
 ## Introduction:
 This project is an assignment in an object-oriented course at Ariel University. The project consists of two parts: The first part is an implenentation of directed weighted graph in python and consist 3 classes, 2 interfaces and 2 test. 
-The second part of the project is to plot the graph using 'matplotlib' visualize it.
+The second part of the project is to plot the graph using `matplotlib` visualize it.
 
-## Operating Instructions:
+## Operating Instructions =====WE NEED TO CHE OW WE NEED TO SUBMIT IT===== :
 1. Download the jar file.
 2. Put the Json files in the same folder.
 3. In the command line, write the following command:
@@ -22,83 +22,52 @@ The second part of the project is to plot the graph using 'matplotlib' visualize
 
 # Description of the classes:
 
-## Class MyGeoLocation implements GeoLocation:
-##### This class represents a geo location <x,y,z>, (aka Point3D data).
 
-|          Methods                | Details                             | 
-| --------------------------------|:--------------------------------------:| 
-|`distance(GeoLocation g)`|Returns the distance between 2 points| 
-|`MyGeoLocation()`|An empty constractor of a new GeoLocation.| 
-|`MyGeoLocation(GeoLocation g)`|A constractor of a new GeoLocation|   
-
-## Class MyNode implements NodeData:
+## Class Node implements NodeData:
 ##### This class represents the set of operations applicable on a node (vertex) in a (directional) weighted graph.
 
 |          Methods                | Details                             | 
 | --------------------------------|:--------------------------------------:| 
-|`getKey()`|Returns the key (id) associated with this node.| 
-|`getLocation()`|Returns the location of this node, if none return null.| 
-|`setLocation(GeoLocation p)`|Allows changing this node's location.|  
-|`getWeight()`|Returns the weight associated with this node.| 
-|`SetWeight(double w)`|Allows changing this node's weight.| 
-|`getInfo()`|Returns the remark (meta data) associated with this node.| 
-|`setInfo(String s)`|Allows changing the remark (meta data) associated with this node.| 
-|`getTag()`|Returns the tag associated with this node.|   
-|`setTag(int t)`|Allows setting the "tag" value for temporal marking an node-common practice for marking by algorithms.|
+|`get_key()`|Returns the key (id) associated with this node.|
+|`get_dist()`| get the dist of a given node.|
+|`get_dist()`| allow to set the dist of a given node.|
+|`get_visited`| tell us if the node have been visited or not.|
+|`set_visited`| allow us to the node visited mode (True \ False).|
+|`get_pos()`|Returns the location of this node, if none return None.| 
+|`set_pos(x,y,z)`|Allows changing this node's location.|
+|`get_x`| get the X location of the node.|
+|`get_y`| get the Y location of the node.|
 
 
-## Class MyEdge implements EdgeData:
+## Class DiGraph implements GraphInterface:
 ##### This class represents the set of operations applicable on a directional edge (src,dest) in a (directional) weighted graph.
                                  
 |          Methods                | Details                             | 
 | --------------------------------|:--------------------------------------:| 
-|`int getSrc()`|The id of the source node of this edge.| 
-|`getDest()`|The id of the destination node of this edge|
-|`getWeight()`|return the weight of this edge (positive value).| 
-|`getInfo()`|Returns the remark (meta data) associated with this edge.| 
-|`setInfo(String s)`|Allows changing the remark (meta data) associated with this edge.| 
-|`getTag()`|Returns the tag associated with this edge .|   
-|`setTag(int t)`|Allows setting the "tag" value for temporal marking an edge -common practice for marking by algorithms.|
+|`v_size()`| Returns the number of vertices in this graph.| 
+|`e_size()`| Returns the number of edges in this graph|
+|`get_all_v()`|return a dictionary of all the nodes in the Graph, each node is represented using a pair (node_id, node_data).| 
+|`all_in_edges_of_node()`| return a dictionary of all the nodes connected to (into) node_id ,each node is represented using a pair (other_node_id, weight)| 
+|`all_out_edges_of_node()`|return a dictionary of all the nodes connected from node_id , each node is represented using a pair (other_node_id, weight).| 
+|`get_mc()`| Returns the current version of this graph, on every change in the graph state - the MC should be increased .|   
+|`add_node()`| Adds a node to the graph.|
+|`remove_node()`| Removes a node from the graph.|
+|`remove_edge()`| Removes an edge from the graph.|
 
-## Class  DW_Graph implements DirectedWeightedGraph:
+## Class  GraphAlgo implements GraphAlgoInterface:
 ##### This class represents a Directional Weighted Graph.
  
 |          Methods                | Details                             | 
 | --------------------------------|:--------------------------------------:| 
-|`getNode(int key)`|Returns the node_data by the node_id.| 
-|`getEdge(int src, int dest)`|Returns the data of the edge (src,dest), null if none,this method run in O(1) time.|
-|`addNode(NodeData n)`|Adds a new node to the graph with the given node_data,this method run in O(1) time.| 
-|`connect(int src, int dest, double w)`|Connects an edge with weight w between node src to node dest, this method run in O(1) time.| 
-|`nodeIter()`|Returns an Iterator for the collection representing all the nodes in the graph.| 
-|`edgeIter()`|Returns an Iterator for all the edges in this graph.|   
-|`edgeIter(int node_id)`| returns an Iterator for edges getting out of the given node.|
-|`removeNode(int key)`|Deletes the node (with the given ID) from the graph-and removes all edges which starts or ends at this node.| 
-|`removeEdge(int src, int dest)`|Deletes the edge from the graph, this method run in O(1) time.| 
-|`nodeSize()`|Returns the number of vertices (nodes) in the graph,this method run in O(1) time.|   
-|`edgeSize()`|Returns the number of edges (assume directional graph),this method run in O(1) time.|
-|`getMC()`|Returns the Mode Count - for testing changes in the graph.|
+|`get_graph()`| return the directed graph on which the algorithm works on.| 
+|`load_from_json()`|Loads a graph from a json file.|
+|`save_to_json()`|Saves the graph in JSON format to a file.| 
+|`shortest_path()`|Returns the shortest path from node id1 to node id2 using Dijkstra's Algorithm.| 
+|`TSP()`|Finds the shortest path that visits all the nodes in the list.| 
+|`centerPoint()`|Finds the node that has the shortest distance to it's farthest node.|   
+|`plot_graph()`| Plots the graph.|
 
-
-## Class MyDWGraphAlgo implements DirectedWeightedGraphAlgorithms:
-##### This class represents a Directed (positive) Weighted Graph Theory Algorithms.
- 
-|          Methods                | Details                             | 
-| --------------------------------|:--------------------------------------:| 
-|`init(DirectedWeightedGraph g)`|Inits the graph on which this set of algorithms operates on.| 
-|`DirectedWeightedGraph getGraph()`|Returns the underlying graph of which this class works.|
-|`copy()`|Computes a deep copy of this weighted graph.| 
-|`isConnected()`|Returns true if and only if there is a valid path from each node to each other node.| 
-|`shortestPathDist(int src, int dest)`|Computes the length of the shortest path between src to dest.| 
-|`dijkstra(NodeData src, NodeData dest)`|eturns the shortest path as a double number.helper for "center" ,and for "shortest path dist".| 
-|`shortestPath(int src, int dest)`|Computes the the shortest path between src to dest - as an ordered List of nodes|   
-|`DfsAlgo(int NodeKey)`|Depth-first search algo , helper for "isconnected"|   
-|`dijkstraList(NodeData src, NodeData dest)`|Returns the shortest path as a list of nodes that represents the path.helper for shortest path|   
-|`bfs(int src)`| Breadth-first search (BFS), We use it for tsp algo. | 
-|`getTranspose(DirectedWeightedGraph graph)`|Compute the transpose of the graph.Helper for "IsConnected" algo.| 
-|`center()`|Finds the NodeData which minimizes the max distance to all the other nodes.|
-|`tsp(List<NodeData> cities)`|Computes a list of consecutive nodes which go over all the nodes in cities.| 
-|`save(String file)`|Saves this weighted (directed) graph to the given file name - in JSON format, in oreder to do that we used serializer| 
-|`load(String file)`|This method loads a graph to this graph algorithm, in oreder to do that we used serializer|   
+## We did tests on each class
 
 ## Second part - GUI visualization:
 
@@ -106,7 +75,7 @@ The second part of the project is to plot the graph using 'matplotlib' visualize
 | --------------------------------|:--------------------------------------:| 
 |`NewPanel`,`NewFrame`|A classes that contains all the functions and calculations in order to display the graph and algorithms clearly on the screen.| 
 
-## GUI visualization -G1.json:
+## matplotlib visualization -G1.json:
 <img width="941" alt="‏‏Ex2GUI" src="https://user-images.githubusercontent.com/93326335/145728834-d757b6f7-267b-4ec1-88c5-b63603baf70e.PNG">
 
 
