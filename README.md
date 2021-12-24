@@ -75,15 +75,15 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 | --------------------------------|:--------------------------------------:| 
 |`NewPanel`,`NewFrame`|A classes that contains all the functions and calculations in order to display the graph and algorithms clearly on the screen.| 
 
-## matplotlib visualization -G1.json:
+## matplotlib visualization -G1.json ==== NEED TO CHANGE=====:
 <img width="941" alt="‏‏Ex2GUI" src="https://user-images.githubusercontent.com/93326335/145728834-d757b6f7-267b-4ec1-88c5-b63603baf70e.PNG">
 
 
-## Diagram of the project: 
+## Diagram of the project  ==== NEED TO CHANGE=====: 
 (It is recommended to zoom in.)
 ![Ex2](https://user-images.githubusercontent.com/79272744/145713175-c69f347b-c187-4c20-adfc-91cd1e0b90e9.png)
 
-### RunTime:
+### RunTime  ==== NEED TO CHANGE=====:
 1000V , 10000E :
 building graph - 1.76 sec
 ,isconnected - 0.3 sec
