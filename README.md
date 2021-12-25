@@ -88,17 +88,9 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 
 
 
-### RunTime  ==== NEED TO CHANGE=====:
-1000V , 10000E :
-building graph - 1.76 sec
-,isconnected - 0.3 sec
-,remove - 0.26 sec
-,shortpathdist - 0.31 sec 
+## Run Time: 
+| 1000V, 9000E | 10000V, 90000E | 100000V, 2000000E |  
+|:---------:|:---------:|:---------:| 
+|![1_000](https://user-images.githubusercontent.com/79272744/147395246-b4c37d2a-7737-4db6-a6d3-ea573094ec38.png)| ![10_000](https://user-images.githubusercontent.com/79272744/147395250-b8d1fd52-4cee-4c49-9f89-97bdff483134.png)| ![100_000](https://user-images.githubusercontent.com/79272744/147395252-166fb6be-bbb6-4f85-a398-be461cccdbfc.png)
 
-10000V , 100000E :
-building graph - 4.44 sec
-,shortpathdist - 0.31 sec
 
-100000V, 1000000E :
-building graph - 19 sec
-,shortpathdist - 0.35 sec
