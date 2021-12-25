@@ -72,8 +72,7 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 ## matplotlib visualization:
 | A1 | A2 | check2 from the main |  
 |:---------:|:---------:|:---------:| 
-|![A1](https://user-images.githubusercontent.com/79272744/147393215-5ea779af-e80b-4d52-ba75-bf679b49b0c3.png)|![A2](https://user-images.githubusercontent.com/79272744/147393213-8c57b7e4-214f-4919-8ab9-b6605d4a14e5.png)|![check2](https://user-images.githubusercontent.com/79272744/147393275-5adb067d-66ae-463b-a80e-c43ef9d335c2.png)
-|
+|![A1](https://user-images.githubusercontent.com/79272744/147393215-5ea779af-e80b-4d52-ba75-bf679b49b0c3.png)|![A2](https://user-images.githubusercontent.com/79272744/147393213-8c57b7e4-214f-4919-8ab9-b6605d4a14e5.png)|![check2](https://user-images.githubusercontent.com/79272744/147393275-5adb067d-66ae-463b-a80e-c43ef9d335c2.png)|
 
 
 ## Diagram of the project: 
