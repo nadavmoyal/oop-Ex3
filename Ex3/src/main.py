@@ -1,6 +1,5 @@
 from DiGraph import DiGraph
-# from GraphAlgo\
-import GraphAlgo
+from GraphAlgo import GraphAlgo
 
 
 def check():
@@ -32,8 +31,6 @@ def check0():
     g = DiGraph()  # creates an empty directed graph
     for n in range(4):
         g.add_node(n)
-    print(f"=============={len(g.get_all_v())}")
-    print(f"=============={g.v_size()}")
     g.add_edge(0, 1, 1)
     g.add_edge(1, 0, 1.1)
     g.add_edge(1, 2, 1.3)
@@ -108,4 +105,4 @@ def check3():
 
 
 if __name__ == '__main__':
-    check()
+    check2()

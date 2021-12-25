@@ -116,8 +116,7 @@ class DiGraph(GraphInterface):
         if id1 not in self._nodes.keys():
             return {}
         # if it doesit will return the inner dict for the KEY:'id1' in '_edgesInside' outer dict
-        return self._edgesInside.get(
-            id1)  # return all of the nodes neighbors (dict of dict, like we did in Ex2 in java)
+        return self._edgesInside.get(id1)  # return all of the nodes neighbors (dict of dict, like we did in Ex2 in java)
 
     def all_out_edges_of_node(self, id1: int) -> dict:
         # this will first check if the node input is in our graph

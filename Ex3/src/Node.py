@@ -2,7 +2,6 @@ class Node(object):
     _key: int
     _dist: float
     _visited: bool
-    _component: int
     _pos: tuple
 
     def __init__(self, key: int, pos: tuple = None):
@@ -26,11 +25,6 @@ class Node(object):
     def set_visited(self, visited: bool) -> None:
         self._visited = visited
 
-    def get_component(self) -> int:
-        return self._component
-
-    def set_component(self, component: int) -> None:
-        self._component = component
 
     def get_pos(self) -> tuple:
         return self._pos
@@ -49,12 +43,6 @@ class Node(object):
 
     def __repr__(self):
         return f'id: {self._key}, pos: {self._pos}'
-
-    def __eq__(self, other):
-        # check if node equal to other node
-        if type(self) != type(other):
-            return False
-        return self.get_key() == other.get_key() and self.get_pos() == other.get_pos()
 
     def __eq__(self, other):
         return (self._key == other._key) and (self.g == other.g)

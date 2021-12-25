@@ -52,7 +52,28 @@ class TestGraphAlgo(TestCase):
         self.fail()
 
     def test_shortest_path(self):
-        self.fail()
+        _graphAlgo = GraphAlgo()
+        _graph = DiGraph()
+        _graph.add_node(0, (2, 3))
+        _graph.add_node(1, (3, 3))
+        _graph.add_node(2, (5, 3))
+        _graph.add_node(3, (5, 3))
+        _graph.add_node(4, (5, 3))
+        _graph.add_node(5, (5, 3))
+        _graph.add_node(6, (5, 3))
+
+        _graph.add_edge(0, 1, 1)
+        _graph.add_edge(1, 2, 1)
+        _graph.add_edge(2, 3, 1)
+        _graph.add_edge(3, 4, 1)
+        _graph.add_edge(4, 5, 1)
+        _graph.add_edge(5, 6, 1)
+        _graph.add_edge(0, 6, 20)
+        _graphAlgo.__init__(_graph)
+        self.assertEqual(_graphAlgo.shortest_path(0,6), (6, [0, 1, 2,3,4,5,6]))
+        self.assertEqual(_graphAlgo.shortest_path(1,0), (float('inf'), []))
+        self.assertEqual(_graphAlgo.shortest_path(0,0), (0, []))
+
 
     def test_plot_graph(self):
         _graphAlgo = GraphAlgo()
@@ -73,7 +94,6 @@ class TestGraphAlgo(TestCase):
         dic = _graphAlgo.get_graph().get_all_v()
         for x in dic:
             n1 = _graphAlgo.get_graph().get_all_v().get(x).get_pos()
-            print(n1)
 
 
 
@@ -85,16 +105,13 @@ class TestGraphAlgo(TestCase):
         _graph.add_node(2, (5, 3))
         _graph.add_node(3, (5, 2))
         _graph.add_node(4, (2, 9))
-        _graph.add_edge(0, 1, 10)
-        _graph.add_edge(1, 2, 10)
-        _graph.add_edge(2, 0, 1)
-        _graph.add_edge(2, 1, 1)
-        _graph.add_edge(1, 3, 2)
-        _graph.add_edge(3, 2, 7)
-        _graph.add_edge(3, 0, 4)
-        _graph.add_edge(4, 0, 3)
+        _graph.add_edge(0, 1, 1)
+        _graph.add_edge(1, 2, 1)
+        _graph.add_edge(3, 2, 10)
+
         _graphAlgo.__init__(_graph)
-        self.assertEqual((2, 8), (_graphAlgo.TSP(list[0,1])))
+        self.assertEqual(([0,1,2],2), (_graphAlgo.TSP([0])))
+
 
     def test_center_point(self):
         _graphAlgo = GraphAlgo()
@@ -123,5 +140,3 @@ class TestGraphAlgo(TestCase):
         self.assertEqual((40, 9.291743173960954),self.ga5.centerPoint())
 
 
-    def test_dijkstra(self):
-        self.fail()
