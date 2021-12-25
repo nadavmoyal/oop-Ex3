@@ -15,41 +15,36 @@ class TestGraphAlgo(TestCase):
         self.ga3: GraphAlgoInterface = GraphAlgo()
         self.ga4: GraphAlgoInterface = GraphAlgo()
         self.ga5: GraphAlgoInterface = GraphAlgo()
-        self.ga0.load_from_json('../data/A0.json')
-        self.ga1.load_from_json('../data/A1.json')
-        self.ga2.load_from_json('../data/A2.json')
-        self.ga3.load_from_json('../data/A3.json')
-        self.ga4.load_from_json('../data/A4.json')
-        self.ga5.load_from_json('../data/A5.json')
+        self.ga0.load_from_json('A0.json')
+        self.ga1.load_from_json('A1.json')
+        self.ga2.load_from_json('A2.json')
+        self.ga3.load_from_json('A3.json')
+        self.ga4.load_from_json('A4.json')
+        self.ga5.load_from_json('A5.json')
 
-    def DefaultGraphAlgo(self):
+
+    def test_get_load_save_graph(self):
         _graphAlgo = GraphAlgo()
         _graph = DiGraph()
-        _graph.add_node(0,2,3)
-        _graph.add_node(1,3,3)
-        _graph.add_node(2,8,5)
-        _graph.add_node(3,5,2)
-        _graph.add_node(4,6,4)
-        _graph.add_edge(0,1,2)
-        _graph.add_edge(0,2,4)
-        _graph.add_edge(2,4,5)
-        _graph.add_edge(1,3,3)
-        _graph.add_edge(3,0,4)
-        _graph.add_edge(3,1,6)
-        _graph.add_edge(4,2,2)
+        _graph.add_node(0, (2, 3))
+        _graph.add_node(1, (3, 3))
+        _graph.add_node(2, (5, 3))
+        _graph.add_node(3, (2, 5))
+        _graph.add_edge(0, 1, 1)
+        _graph.add_edge(1, 2, 1)
+        _graph.add_edge(2, 3, 1)
+
+        _graphAlgo.__init__(_graph)
+        GraphToGet=_graphAlgo.get_graph()
+        self.assertEqual(4,GraphToGet.v_size())
+        self.assertEqual(3,GraphToGet.e_size())
 
 
+        self.GraphToLoad: GraphAlgoInterface = GraphAlgo()
+        self.GraphToLoad.load_from_json('A0.json')
+        self.assertEqual(32,self.GraphToLoad.__sizeof__())
+        self.GraphToLoad.save_to_json('SavedGraphTest.json')
 
-    def test_get_graph(self):
-        self.temp=self.ga0.get_graph()
-
-        self.fail()
-
-    def test_load_from_json(self):
-        self.fail()
-
-    def test_save_to_json(self):
-        self.fail()
 
     def test_shortest_path(self):
         _graphAlgo = GraphAlgo()
@@ -61,7 +56,6 @@ class TestGraphAlgo(TestCase):
         _graph.add_node(4, (5, 3))
         _graph.add_node(5, (5, 3))
         _graph.add_node(6, (5, 3))
-
         _graph.add_edge(0, 1, 1)
         _graph.add_edge(1, 2, 1)
         _graph.add_edge(2, 3, 1)

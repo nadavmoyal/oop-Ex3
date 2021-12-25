@@ -108,18 +108,19 @@ class TestDiGraph(TestCase):
         self.assertEqual(g.e_size(), 4)  # after del edge (2,3)
         self.assertEqual(g.get_mc(), 10)  # mc will grow also when del
 
-    # def test_get_all_v(self):
-    #     g = DiGraph()  # creates an empty directed graph
-    #     g.add_node(0, (0, 1, 0))  # remember that in pos is (x,y,z)
-    #     g.add_node(1, (1, 0, 0))  # remember that in pos is (x,y,z)
-    #     self.assertEqual(g.v_size(), 2)
-    #
-    #     # nodesWeWantToSeeInOurGraphValues = {id: 0, "pos": (0, 1, 0), "id": 1, "pos": (1, 0, 0)}#{0: (0, 1, 0), 1: (1, 0, 0)}
-    #     # self.assertDictEqual(g._nodes,nodesWeWantToSeeInOurGraph)
-    #
-    #     g.remove_node(0) # we del node 0:(0,1,0)
-    #     nodesWeWantToSeeInOurGraph = {1: (1, 0, 0)}
-    #     self.assertDictEqual(g._nodes,nodesWeWantToSeeInOurGraph)
+    def test_get_all_v(self):
+        _graph = DiGraph()
+        _graph.add_node(0, (2, 3))
+        _graph.add_node(1, (3, 3))
+        _graph.add_node(2, (5, 3))
+        _graph.add_node(3, (2, 5))
+        _graph.add_edge(0, 1, 1)
+        _graph.add_edge(1, 2, 1)
+        _graph.add_edge(2, 3, 1)
+        self.assertEqual(4,_graph.get_all_v().__len__())
+        _graph.add_node(5, (4, 6))
+        _graph.add_node(4, (33, 2))
+        self.assertEqual(6,_graph.get_all_v().__len__())
 
 
     def test_all_in_edges_of_node(self):
