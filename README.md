@@ -83,9 +83,10 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 
 ## Diagram of the project: 
 (It is recommended to zoom in.)
-![image](https://user-images.githubusercontent.com/79272744/147392991-57d9c29a-74d7-4a13-a732-4ce8291ddfb7.png)
-![image](https://user-images.githubusercontent.com/79272744/147392993-506ad117-ef9c-4996-a459-66d281f0a2be.png)
-![image](https://user-images.githubusercontent.com/79272744/147392995-01a4d761-857b-4a13-a3c6-9a3dc5504dc6.png)
+![Node](https://user-images.githubusercontent.com/79272744/147393048-45043c39-62c7-4991-9![GrapgInterface](https://user-images.githubusercontent.com/79272744/147393051-8d3b0edf-63a5-4230-a809-93090612b232.png)
+20![GraphAlgoInterface](https://user-images.githubusercontent.com/79272744/147393053-d1d678d6-1315-4821-8492-3b0fed434054.png)
+e-60fbb920d8dc.png)
+
 
 
 
