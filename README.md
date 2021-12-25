@@ -88,7 +88,11 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 
 
 
-## Run Time: 
+## Run Time:
+#### Computer specifications:
+Operating System - Windows 10 
+Computer processor - Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz   1.19 GHz
+RAM -20.0 GB
 | 1000V, 9000E | 10000V, 90000E | 100000V, 2000000E |  
 |:---------:|:---------:|:---------:| 
 |![1_000](https://user-images.githubusercontent.com/79272744/147395246-b4c37d2a-7737-4db6-a6d3-ea573094ec38.png)| ![10_000](https://user-images.githubusercontent.com/79272744/147395250-b8d1fd52-4cee-4c49-9f89-97bdff483134.png)| ![100_000](https://user-images.githubusercontent.com/79272744/147395252-166fb6be-bbb6-4f85-a398-be461cccdbfc.png)|
