@@ -1,5 +1,3 @@
-<img width="310" alt="‏‏check2" src="https://user-images.githubusercontent.com/79272744/147392856-a630bb7e-e8cd-48d9-88c5-b5683261a1d9.PNG">
-
 ![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUC7G6cLvCjY5-Sq4vRcieUJc_O4KjwMl8NQEKDTrAElDHc2178puykOjpVgY8XRASD_M&usqp=CAU)
 
 # Ex3
@@ -83,9 +81,14 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 
 ## Diagram of the project: 
 (It is recommended to zoom in.)
-![Node](https://user-images.githubusercontent.com/79272744/147393048-45043c39-62c7-4991-9![GrapgInterface](https://user-images.githubusercontent.com/79272744/147393051-8d3b0edf-63a5-4230-a809-93090612b232.png)
-20![GraphAlgoInterface](https://user-images.githubusercontent.com/79272744/147393053-d1d678d6-1315-4821-8492-3b0fed434054.png)
-e-60fbb920d8dc.png)
+### Node
+![Node](https://user-images.githubusercontent.com/79272744/147393070-8d4fba45-49c7-41fd-a8b5-8601de9855b0.png)
+### GraphInterface
+![GrapgInterface](https://user-images.githubusercontent.com/79272744/147393074-aac1a11f-83aa-4618-8382-21ce8674a01d.png)
+### GraphAlgoInterface
+![GraphAlgoInterface](https://user-images.githubusercontent.com/79272744/147393090-9a048523-9496-4787-bcd0-211c767ff22a.png)
+
+
 
 
 
