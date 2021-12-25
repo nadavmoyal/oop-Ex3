@@ -90,8 +90,8 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 
 ## Run Time:
 #### Computer specifications:
-Operating System - Windows 10 \n
-Computer processor - Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz   1.19 GHz
+Operating System - Windows 10\
+Computer processor - Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz   1.19 GHz\
 RAM -20.0 GB
 | 1000V, 9000E | 10000V, 90000E | 100000V, 2000000E |  
 |:---------:|:---------:|:---------:| 
