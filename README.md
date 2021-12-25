@@ -1,3 +1,4 @@
+<img width="310" alt="‏‏check2" src="https://user-images.githubusercontent.com/79272744/147392856-a630bb7e-e8cd-48d9-88c5-b5683261a1d9.PNG">
 
 ![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUC7G6cLvCjY5-Sq4vRcieUJc_O4KjwMl8NQEKDTrAElDHc2178puykOjpVgY8XRASD_M&usqp=CAU)
 
@@ -75,13 +76,18 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 | --------------------------------|:--------------------------------------:| 
 |`NewPanel`,`NewFrame`|A classes that contains all the functions and calculations in order to display the graph and algorithms clearly on the screen.| 
 
-## matplotlib visualization -G1.json ==== NEED TO CHANGE=====:
-<img width="941" alt="‏‏Ex2GUI" src="https://user-images.githubusercontent.com/93326335/145728834-d757b6f7-267b-4ec1-88c5-b63603baf70e.PNG">
+## matplotlib visualization -check2 from the main:
+<img width="310" alt="‏‏check2" src="https://user-images.githubusercontent.com/79272744/147392864-23f80209-6eb6-4f9e-8668-f4384f450b45.PNG">
 
 
-## Diagram of the project  ==== NEED TO CHANGE=====: 
+
+## Diagram of the project: 
 (It is recommended to zoom in.)
-![Ex2](https://user-images.githubusercontent.com/79272744/145713175-c69f347b-c187-4c20-adfc-91cd1e0b90e9.png)
+![image](https://user-images.githubusercontent.com/79272744/147392991-57d9c29a-74d7-4a13-a732-4ce8291ddfb7.png)
+![image](https://user-images.githubusercontent.com/79272744/147392993-506ad117-ef9c-4996-a459-66d281f0a2be.png)
+![image](https://user-images.githubusercontent.com/79272744/147392995-01a4d761-857b-4a13-a3c6-9a3dc5504dc6.png)
+
+
 
 ### RunTime  ==== NEED TO CHANGE=====:
 1000V , 10000E :
