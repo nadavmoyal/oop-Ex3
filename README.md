@@ -77,16 +77,12 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 ## matplotlib visualization -check2 from the main:
 <img width="310" alt="‏‏check2" src="https://user-images.githubusercontent.com/79272744/147392864-23f80209-6eb6-4f9e-8668-f4384f450b45.PNG">
 
-
-
 ## Diagram of the project: 
-(It is recommended to zoom in.)
-### Node
-![Node](https://user-images.githubusercontent.com/79272744/147393070-8d4fba45-49c7-41fd-a8b5-8601de9855b0.png)
-### GraphInterface
-![GrapgInterface](https://user-images.githubusercontent.com/79272744/147393074-aac1a11f-83aa-4618-8382-21ce8674a01d.png)
-### GraphAlgoInterface
-![GraphAlgoInterface](https://user-images.githubusercontent.com/79272744/147393090-9a048523-9496-4787-bcd0-211c767ff22a.png)
+| Node | GraphInterface | GraphAlgoInterface |  
+|:---------:|:---------:|:---------:| 
+| ![Node](https://user-images.githubusercontent.com/79272744/147393118-d5cd11db-c9a1-4ad9-a087-90c87bea0994.png)| ![GrapgInterface](https://user-images.githubusercontent.com/79272744/147393123-e0e9fe75-4b39-4d93-b36b-30e42862d03b.png)|![GraphAlgoInterface](https://user-images.githubusercontent.com/79272744/147393124-2df8a214-35c3-4c3d-9fb0-a71906e09685.png)|
+
+
 
 
 
