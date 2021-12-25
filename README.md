@@ -68,14 +68,14 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 
 ## We did tests on each class
 
-## Second part - GUI visualization:
 
-|          class                  | Details                             | 
-| --------------------------------|:--------------------------------------:| 
-|`NewPanel`,`NewFrame`|A classes that contains all the functions and calculations in order to display the graph and algorithms clearly on the screen.| 
+## matplotlib visualization:
+| A1 | A2 | check2 from the main |  
+|:---------:|:---------:|:---------:| 
+|![A1](https://user-images.githubusercontent.com/79272744/147393215-5ea779af-e80b-4d52-ba75-bf679b49b0c3.png)
+|![A2](https://user-images.githubusercontent.com/79272744/147393213-8c57b7e4-214f-4919-8ab9-b6605d4a14e5.png)
+|<img width="310" alt="‏‏check2" src="https://user-images.githubusercontent.com/79272744/147392864-23f80209-6eb6-4f9e-8668-f4384f450b45.PNG">|
 
-## matplotlib visualization -check2 from the main:
-<img width="310" alt="‏‏check2" src="https://user-images.githubusercontent.com/79272744/147392864-23f80209-6eb6-4f9e-8668-f4384f450b45.PNG">
 
 ## Diagram of the project: 
 | Node | GraphInterface | GraphAlgoInterface |  
