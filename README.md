@@ -66,6 +66,7 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 |`centerPoint()`|Finds the node that has the shortest distance to it's farthest node.|   
 |`plot_graph()`| Plots the graph.|
 
+You can find more information about these algorithms on our [wiki page](https://github.com/nadavmoyal/oop-Ex3/wiki).
 ## We did tests on each class
 
 
