@@ -14,8 +14,8 @@ This project is an assignment in an object-oriented course at Ariel University. 
 The second part of the project is to plot the graph using `matplotlib` visualize it.
 
 ## Operating Instructions :
-1. Open the project.
-2. Chack that `matplotlib` is already istalled.
+1. Open the project in your workspace.
+2.Check that `matplotlib` is already installed.
 3. Put the Json files in the same folder.
 4. Run the `main` class.
 
