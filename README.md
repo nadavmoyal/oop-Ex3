@@ -69,10 +69,15 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 You can find more information about these algorithms on our [wiki page](https://github.com/nadavmoyal/oop-Ex3/wiki).
 ## We did tests on each class
 #### In the tests we checked cases like:
+
 `Add node` / `remove node`.
+
 `Add Edge` / `Remove Edge`.
+
 `save` & `load` graph.
+
 `get` & `init` graph.
+
 Examination of extreme cases in which the main receives None.
 And of course more tests for all the algorithms we built.
 
