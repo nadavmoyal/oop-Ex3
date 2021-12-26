@@ -13,6 +13,12 @@
 This project is an assignment in an object-oriented course at Ariel University. The project consists of two parts: The first part is an implenentation of directed weighted graph in python and consist 3 classes, 2 interfaces and 2 test. 
 The second part of the project is to plot the graph using `matplotlib` visualize it.
 
+## Operating Instructions :
+1. Open the project.
+2. Chack that `matplotlib` is already istalled.
+3. Put the Json files in the same folder.
+4. Run the `main` class.
+
 # Description of the classes:
 
 
