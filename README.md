@@ -13,12 +13,6 @@
 This project is an assignment in an object-oriented course at Ariel University. The project consists of two parts: The first part is an implenentation of directed weighted graph in python and consist 3 classes, 2 interfaces and 2 test. 
 The second part of the project is to plot the graph using `matplotlib` visualize it.
 
-## Operating Instructions =====WE NEED TO CHE OW WE NEED TO SUBMIT IT===== :
-1. Download the jar file.
-2. Put the Json files in the same folder.
-3. In the command line, write the following command:
-"java -jar Ex2.jar "NameOfJsonFile.json" "
-
 # Description of the classes:
 
 
