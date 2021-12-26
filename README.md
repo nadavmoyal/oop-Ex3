@@ -15,7 +15,7 @@ The second part of the project is to plot the graph using `matplotlib` visualize
 
 ## Operating Instructions :
 1. Open the project in your workspace.
-2.Check that `matplotlib` is already installed.
+2. Check that `matplotlib` is already installed.
 3. Put the Json files in the same folder.
 4. Run the `main` class.
 
